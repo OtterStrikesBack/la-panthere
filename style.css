@@ -45,9 +45,7 @@ a:hover {
 }
 
 .bloc-lg {
-    margin-left: 30%;
-    margin-right: auto;
-    padding: 40px;
+    padding: 100px 50px;
 }
 
 .bloc-md {
@@ -730,7 +728,8 @@ h1 {
 }
 
 h4 {
-    color: #333333!important;
+    color: #575757!important;
+
 }
 
 .icons {
@@ -1046,4 +1045,9 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
+}
+
+@media (max-width: 650px) {
+
+
 }
