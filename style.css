@@ -370,6 +370,7 @@ a:hover {
         right: 20px;
         transform: translate(0, -50%);
         -webkit-transform: translateY(-50%);
+        
     }
     .nav > li .dropdown-menu a,
     .nav > li .dropdown-menu a:hover {
@@ -402,6 +403,7 @@ a:hover {
         float: none;
         margin: 10px auto 0;
     }
+
 }
 
 .nav > li > .dropdown a {
@@ -682,6 +684,7 @@ p {
 }
 
 .tight-width-whitespace {
+
     max-width: 600px;
     margin: auto auto auto auto;
 }
@@ -734,6 +737,7 @@ h1 {
 
 h4 {
     color: #575757!important;
+    
 
 }
 
@@ -751,6 +755,7 @@ h4 {
 }
 
 .portfolio-row {
+
     margin-bottom: 44px;
     margin-top: 50px;
 }

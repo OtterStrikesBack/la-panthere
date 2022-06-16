@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="shortcut icon" type="image/png" href="favicon.jpg">
+
     
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -18,6 +19,40 @@
 	<script src="./js/blocs.js"></script>
 	<script src="./js/jquery.touchSwipe.js" defer></script>
 	<script src="./js/gmaps.js"></script>
+
+	# BEGIN Cache-Control Headers
+	<IfModule mod_headers.c>
+	<FilesMatch "\.(ico|jpe?g|png|gif|swf|css|gz)$">
+	Header set Cache-Control "max-age=2592000, public"
+	</FilesMatch>
+	<FilesMatch "\.(js)$">
+	Header set Cache-Control "max-age=2592000, private"
+	</FilesMatch>
+	<filesMatch "\.(html|htm)$">
+	Header set Cache-Control "max-age=7200, public"
+	</filesMatch>
+	# Enleve le cache pour les ressources dynamiques
+	<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+	Header unset Cache-Control
+	</FilesMatch>
+	</IfModule>
+	# END Cache-Control Headers
+
+	# BEGIN Expires Headers
+	<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType image/jpg "access plus 1 year"
+	ExpiresByType image/jpeg "access plus 1 year"
+	ExpiresByType image/gif "access plus 1 year"
+	ExpiresByType image/png "access plus 1 year"
+	ExpiresByType text/css "access plus 1 month"
+	ExpiresByType application/pdf "access plus 1 month"
+	ExpiresByType text/x-javascript "access plus 1 month"
+	ExpiresByType application/x-shockwave-flash "access plus 1 month"
+	ExpiresByType image/x-icon "access plus 1 year"
+	ExpiresDefault "access plus 2 days"
+	</IfModule>
+	# END Expires Headers
 
     <title>La Panthère</title>
 
@@ -157,7 +192,7 @@
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<img alt="agence web, agence web paris, web design paris, stratégie web" src="img/title2.png" />
+				<h4>Nous travaillons avec beaucoup des clients, voici nos réalisations.</h4>
 			</div>
 		</div>
 		<div class="row tight-width-whitespace portfolio-row">
